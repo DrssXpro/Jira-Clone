@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { logoImages } from "@/constants";
 import { Button } from "@/components/ui/button";
+import ThemeToggleButton from "@/components/theme/ThemeToggleButton";
+import ThemeLogo from "@/components/theme/ThemeLogo";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -8,14 +8,17 @@ interface AuthLayoutProps {
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <main className="bg-neutral-100 w-screen h-screen overflow-hidden">
+    <main className="bg-background transition-all w-screen h-screen overflow-hidden">
       <div className="mx-auto w-full p-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Image width={40} height={40} src={logoImages.LIGHT} alt="logo" />
+            <ThemeLogo />
             <div className="font-bold text-2xl">Jira Clone</div>
           </div>
-          <Button>Sign up</Button>
+          <div className="flex items-center gap-4">
+            <ThemeToggleButton />
+            <Button>Sign up</Button>
+          </div>
         </nav>
         {children}
       </div>
