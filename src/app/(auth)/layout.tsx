@@ -20,7 +20,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
             <Button>Sign up</Button>
           </div>
         </nav>
-        {children}
+        <div className="mt-5">{children}</div>
       </div>
     </main>
   );
