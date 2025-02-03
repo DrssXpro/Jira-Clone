@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/theme/ThemeProvider";
 
@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   description: "A Jira Clone Website by Antonio Course",
 };
 
-const myFont = localFont({ src: "../fonts/my-font.ttf" });
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -17,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${myFont.className} antialiased`}>
+      <body className={`${jetBrainsMono.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

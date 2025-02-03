@@ -26,11 +26,11 @@ export default function SignUpPage() {
         </div>
         <Separator />
         <div className="flex flex-col gap-4">
-          <Button variant={"outline"}>
+          <Button variant={"secondary"}>
             <FcGoogle />
             Login with Google
           </Button>
-          <Button variant={"outline"}>
+          <Button variant={"secondary"}>
             <FaGithub />
             Login with Github
           </Button>
