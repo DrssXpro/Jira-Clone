@@ -1,7 +1,7 @@
 import ThemeLogo from "@/components/theme/ThemeLogo";
 import { Separator } from "@/components/ui/separator";
-import Menu from "../Menu";
-
+import Menu from "./components/Menu";
+import WorkSpaces from "./components/WorkSpaces";
 
 export default function SideBar() {
   return (
@@ -10,6 +10,8 @@ export default function SideBar() {
         <ThemeLogo />
         <div className="font-bold text-2xl">Jira Clone</div>
       </div>
+      <Separator className="my-4" />
+      <WorkSpaces />
       <Separator className="my-4" />
       <Menu />
     </aside>

@@ -5,7 +5,7 @@ import { MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import Menu from "../Menu";
+import Menu from "@/components/common/SideBar/components/Menu";
 
 export default function MobileSideBarButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +14,7 @@ export default function MobileSideBarButton() {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
   return (
     <Sheet modal={false} open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
